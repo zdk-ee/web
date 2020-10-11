@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <!--声明js代码域-->
+        <script type="text/javascript">
+        /*函数的声明*/
+            //方式1
+            function test1(a1,a2){
+                alert("函数的声明1");
+            }   
+            //方式2
+            var test2 = new Function("a1","a2","alert('函数声明2')");
+            //方式3
+            var test3=function(a1,a2){
+   	            alert("函数声明3");
+            }
+            /*
+            test1(1,2); //调用
+            test2(1,2); //调用
+            test3(1,2);
+            alert(test2);
+            */
+        /*函数的参数*/
+            function testParam(a1,a2){
+                alert("函数的形参");
+            }
+            //testParam();     //形参都有默认的值undefined,所以在调用时，形参可以不赋值。
+            //testParam(1);
+            //testParam(1,2);
+        /*函数的返回值*/
+            var testReturn=function(){
+                alert("函数的返回值");
+                return "javascript";
+            }
+            alert(testReturn());
+        </script>
+    </head>
+    <body>
+        <h3 align="center">js的函数学习</h3>
+    </body>
+</html>

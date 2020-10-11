@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <!--声明js代码域-->
+    <script type="text/javascript">
+        //直接方式
+        function testGetElementById() {
+            var inp = window.document.getElementById("uid");
+            alert(inp);
+        }
+
+        function testGetElementByName() {
+            var inp = window.document.getElementsByName("val");
+            alert(inp + ":" + inp.length);
+
+        }
+
+        function testGetElementByTagName() {
+            var inp = document.getElementsByTagName("input");
+            alert(inp + ":" + inp.length);
+        }
+
+        function testGetElementByClassNames() {
+            var inp = document.getElementsByClassName("cla");
+            alert(inp);
+        }
+        //间接方式
+        function testParentsToChilds() { //父子关系
+
+            var id = document.getElementById("parentsdiv");
+            var childs = id.childNodes;
+            alert(childs.length);  //三个东西四个空，一共是7个
+        }
+
+        function testChildToParents() { //子父关系
+            var id = document.getElementById("sondiv1");
+            var childs = id.parentNode;
+            alert(childs);
+        }
+
+        function testBrother() { //兄弟关系
+            var bor = document.getElementById("sondiv2");
+            var gg = bor.previousElementSibling;
+            var dd = bor.nextElementSibling;
+            alert(gg + ":" + dd);
+        }
+    </script>
+    <style type="text/css">
+        #showdiv {
+            border: solid 1px black;
+            width: 200px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <h3 align="center">js的document对象的获取HTML元素对象</h3>
+    <h3>直接方式</h3>
+    <input type="text" name="uname" id="uid" value=""><br><br>
+    <input type="button" name="" id="" value="测试获取对象--id" onclick="testGetElementById()">
+
+    <input type="button" name="" id="" value="测试获取对象--name" onclick="testGetElementByName()">
+
+    <input type="button" name="" id="" value="测试获取对象--tagname" onclick="testGetElementByTagName()">
+
+    <input type="button" name="" id="" value="测试获取对象--classname" onclick="testGetElementByClassNames()">
+    <br><br>
+    <div id="showdiv">
+        爱好:<br>
+        <input type="checkbox" name="val" id="" value="" />睡觉
+        <input type="checkbox" name="val" id="" value="" />打游戏
+        <input type="checkbox" name="val" id="" value="" />写代码
+    </div>
+    <br><br>
+    <div class="cla"></div>
+    <hr>
+    <h3>间接方式</h3>
+    <input type="button" id="" name="" value="测试父子关系--parentToSon" onclick="testParentsToChilds()">
+    <input type="button" id="" name="" value="测试子父关系--sonToParent" onclick="testChildToParents()">
+    <input type="button" id="" name="" value="测试兄弟关系--brother" onclick="testBrother()">
+    <br><br>
+    <div id=parentsdiv>
+        <div id=sondiv1>
+            <p></p>
+            <p></p>
+            <p></p>
+        </div>
+        <div id=sondiv2>
+            hello
+        </div>
+        <div id=sondiv3></div>
+    </div>
+    <div class="class1"></div>
+
+</body>
+
+</html>

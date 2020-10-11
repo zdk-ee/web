@@ -1,0 +1,37 @@
+<!--照片墙-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>照片墙</title>
+        <meta charset="utf-8">
+        <style type="text/css">
+            body{
+                background-color: gray;
+                text-align: center;
+            }
+            img{
+                background-color: white;
+                padding:10px;  /*设置内边距*/
+                width:200px;
+                transform: rotate(-10deg);/*设置旋转度数*/
+                margin:20px;/*设置外边距*/
+            }
+            /*使用伪类给标签添加样式*/
+            img:hover{
+                transform: rotate(0deg) scale(1.5); /*设置旋转角度和缩放比例*/
+                z-index:1;         /*设置显示级别*/
+                transition: 1.5s; /*设置显示时间*/
+            }
+
+        </style>
+    </head>
+    <body>
+        <br><br><br>
+        <img src="../html/img/a01.jpg" >
+        <img src="../html/img/a02.jpg" >
+        <img src="../html/img/a03.jpg" ><br>
+        <img src="../html/img/b01.gif" >
+        <img src="../html/img/b02.gif" >
+        <img src="../html/img/b03.gif" >
+    </body>
+</html>

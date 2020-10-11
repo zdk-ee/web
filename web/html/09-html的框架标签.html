@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>html框架学习</title>
+        <meta charset="utf-8">
+    </head>
+
+    <!--
+        注意:首先要删除body
+        框架:
+            frameset
+                rows:按照行进行分割页面
+                cols:按照列进行分割页面
+            子标签:
+                frame:进行区域占位,加载一个单独的网页资源
+                    src:资源路径
+                    name:区域名,结合target使用
+    -->
+    <frameset rows="20%,*,10%">
+        <frame src="frame/top.html"/>
+        <frameset cols="20%,*">
+            <frame src="frame/left.html"/>
+            <frame src="frame/right.html"/>
+        </frameset>
+        <frame src="frame/bottom.html"/>
+    </frameset>
+</html>

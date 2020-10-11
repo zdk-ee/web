@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <!--声明js代码域-->
+        <script type="text/javascript">
+            var date = new Date();
+        /*String对象（和java中基本一致）*/
+        /*Date对象*/
+        function testDate(){
+
+            //获取年份
+            date.getYear();//获得从1900年开始距今的年份数
+            date.getFullYear();//获得当前年份
+            //获取月份
+            date.getMonth()+1;//获得当前月份
+            //获取日期
+            date.getDate();//返回当前日期
+            //获取星期数
+            date.getDay();//返回星期数，注意星期日是0
+            //获取当前时间
+            alert("时间 "+date.getHours()+":"+date.getMinutes()+":"+date.getSeconds());
+        }
+        /*Math对象*/
+            function testMath(){
+                alert("随机数："+Math.floor(Math.random()*900+100)); //100-1000向下取整
+            }
+        /*Global对象*/
+        function testGlobal(){
+            //eval方法(将字符串转译成js代码)
+            eval("var a = '123'");
+            alert(a);
+            //isNaN方法(判断Number强转后是否是数字)
+            if(!isNaN(a)){
+                alert("是数字");
+            }
+            else{
+                alert("不是数字");
+            }
+            //parseInt返回“123abc”中的123，如果没有123，则返回NaN
+            alert(parseInt("12ahdf"));  //返回12
+            alert(parseInt("abkfjh"));  //返回NaN
+            //parseFloat
+            alert(parseFloat("1.23fjdks"));
+            alert(parseFloat("jkjf"));
+        }
+        </script>
+    </head>
+    <body>
+        <h3 align="center">js的常用方法和对象</h3>
+        <input type="button" id="" value="Date对象测试" onclick="testDate()">
+        <input type="button" id="" value="Math对象测试" onclick="testMath()">
+        <input type="button" id="" value="Global对象测试" onclick="testGlobal()">
+    </body>
+</html>

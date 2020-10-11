@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <!--声明js代码域-->
+        <script type="text/javascript">
+            /*单击事件--onclick()*/
+            function testOnclick(){
+                alert("我是单击");
+            }
+            /*双击事件--ondblclick()*/
+            function testOndblclick(){
+                alert("我是双击");
+            }
+            /*鼠标事件--onmouseover*/
+            function testOnmouseover(){
+                alert("我是鼠标悬停事件");
+            }
+            function testOnmousemove(){
+                alert("我被移动了")
+            }
+            function testOnmouseout(){
+                alert("我被移出了");
+            }
+            /*键盘事件*/
+            function testOnkeyup(){
+                alert("键盘弹起");
+            }
+            function testOnkeydown(){
+                alert("键盘下压");
+            }
+            /*焦点事件*/
+            function testOnfocus(){
+                document.getElementById("showdiv").innerHTML="haha";
+            }
+            function testOnblur(){
+                alert("我是失去焦点");
+            }
+            /*页面加载事件*/
+            function testOnload(){
+                alert("我是页面加载");
+            }
+            /*值改变事件*/
+            function testOnchange(){
+                alert("我被改变了");
+            }
+            /*超链接调用js函数*/
+            function testHref(){
+    	        alert("我是超链接调用js函数");
+            }
+        </script>
+        <style type="text/css">
+            #showdiv{
+                width:300px;
+                height:200px;
+                border: solid 1px;
+            }
+
+        </style>
+    </head>
+    <body onload="testOnload()">
+        <h3 align="center">js的事件机制学习</h3>
+        <!--例如在按钮上，也可以是其他类型-->
+        <input type="button" name="" id="" value="单击事件测试" onclick="testOnclick()">
+        <input type="button" name="" id="" value="双击事件测试" ondblclick="testOndblclick()"><br><hr/>
+
+        <div id="showdiv" onmouseover="testOnmouseover()" onmousemove="testOnmousemove()" onmouseout="testOnmouseout()">
+
+        </div>
+        键盘弹起事件：<input type="text" name="" id="" value="" onkeyup="testOnkeyup()"><br/>
+        键盘下压事件：<input type="text" name="" id="" value="" onkeydown="testOnkeydown()"><br><hr/>
+        获取焦点事件：<input type="text" name="" id="" value="" onfocus="testOnfocus()"><br/>
+        失去焦点事件：<input type="text" name="" id="" value="" onblur="testOnblur()"><br/><hr/>
+        值改变事件（地点）：<select onchange="testOnchange()">
+            <option value="">beijing</option>
+            <option value="">shanghai</option>
+            <option value="">chongqing</option>
+        </select>
+        <a href="javascript:testHref()" >调用js函数</a>
+
+
+    </body>
+</html>

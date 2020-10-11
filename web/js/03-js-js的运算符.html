@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>js的运算符</title>
+        <meta charset="utf-8">
+        <!--声明js代码域-->
+        <!--
+            1.等值运算符:==
+                类型一致直接比较
+                类型不一致,先使用Number强转后再进行比较
+            2.等同运算符:===
+                类型不一致直接返回false
+                类型一致,再比较内容,内容一致返回true,不一致返回false.
+
+            注意:null==undefined的值为:true
+                null===undefined的值为:false
+
+        -->
+        <script type="text/javascript">
+            /*基本运算符和java一致*/
+
+            /*特殊关系运算符*/
+            var a1=1;
+            var a2="1";
+            var a3=true;
+            var a4="true";
+            var a5="a";
+            var a6="a";
+            //-----==运算符-----
+            alert(a1==a2);//true
+            alert(a1==a3);//ture
+            alert(a1==a4);//false
+            alert(a2==a3);//true
+            alert(a2==a4);//false
+            alert(a3==a4);//false
+            alert(a5==a6);//true
+
+            //-----===运算符-----
+            alert(a1==a2);//false
+            alert(a1==a3);//talse
+            alert(a1==a4);//false
+            alert(a2==a3);//false
+            alert(a2==a4);//false
+            alert(a3==a4);//false
+            alert(a5==a6);//true
+
+        </script>
+    </head>
+    <body>
+        <h3 align="center">js的运算符</h3>
+    </body>
+</html>

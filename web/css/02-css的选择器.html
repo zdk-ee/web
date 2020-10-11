@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <!--
+            css选择器:
+                标签选择器
+                    标签名{样式1:样式1值;...}
+                    作用:给当前网页中所有的该标签增加相同的样式
+                id选择器
+                    #标签的id{样式1:样式1值;...}
+                    作用:给某个指定的标签增加指定的样式
+                类选择器
+                    .类选择器名{样式1:样式1值;...}
+                    作用:给不同的标签添加相同的样式
+                全部选择器
+                    *{样式1:样式1值;...}
+                    作用:选择所有的HTML标签,并添加相同的样式
+-------------------------------------------------------------------------
+                组合选择器
+                    选择器1,选择器2,...{样式1:样式1值;...}
+                    作用:解决不同选择器之间重复样式的问题
+                子标签选择器
+                    选择器1 子标签选择器{样式1:样式1值;...}
+                    作用:解决子标签样式问题
+                属性选择器
+                    标签名[属性名=属性值]{样式1:样式1值;...}
+                    作用:选择某标签具备某属性并且属性值为某属性值的标签的样式
+        -->
+
+        <!--声明css代码域-->
+        <style type="text/css">
+        /* 标签选择器 */
+            table{
+                width:300px;
+                height:200px;
+                border:solid 1px;
+            }
+
+        /* id选择器 */
+        #t1{
+            background-color:red;
+        }
+        /* 类选择器 */
+        .commen{
+            color:yellow;
+        }
+        /* 全部选择器*/
+        *{
+
+        }
+        /*组合标签选择器*/
+        .commen,table{
+            color:blue;
+        }
+        /*子标签选择器*/
+        ul li a{
+            color:black;
+        }
+        #p1 a{
+            color:yellow
+        }
+
+        /*属性选择器*/
+        input[type="password"]{
+            background-color: red;
+        }
+        </style>
+    </head>
+    <body>
+        <h3 align="center">css的选择器学习</h3>
+        <hr />
+        <hr class="commen"/>
+        <table id=t1 >
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+        <table class="commen">
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+        <ul>
+            <li><a href="">哈哈</a></li>
+            <li><a href="">嘿嘿</a></li>
+            <li><a href="">呵呵</a></li>
+        </ul>
+
+        <p id="p1">
+            <a href="">嘻嘻</a>
+        </p>
+        <p>
+            <a href="">ha嘻</a>
+        </p>
+        
+        <input type="text" name="t" id="" value="">
+        <input type="password" name="" id="" value="">
+    </body>
+</html>

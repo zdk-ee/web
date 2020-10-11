@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <!--声明js代码域-->
+        <script type="text/javascript">
+            //类的声明--person
+            function Person(name,age){
+                this.name = name;
+                this.age = age;
+                this.aihao = "running";
+                this.test=function(a){
+                    alert(a);
+                }
+            }
+            //类的使用
+            var p = new Person("John",32);      //创建类的对象
+            var p1 = new Person("Bob",24);
+            p.address = "北京";             //可以随意添加对象的属性
+            alert(p.address);
+            alert("name = "+p.name+"，"+"age = "+p.age+","+"爱好是"+p.aihao);
+            //类的继承---prototype关键字（它就属于类的属性，与对象无关，从而实现不同对象的数据共享）
+            Person.prototype.txt="haha";   //添加属性txt使它成为Persion类的属性
+            alert(p.txt===p1.txt); //true
+            //自定义对象
+            var obj = new Object();
+            obj.name = "John";
+            obj.age = 19;
+            obj.sex = "F";
+            obj.test=function(){
+                alert("haha");
+            }
+        </script>
+    </head>
+    <body>
+        <h3 align="center">js的类和对象</h3>
+    </body>
+</html>

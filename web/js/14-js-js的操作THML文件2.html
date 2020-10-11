@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <!--声明js代码域-->
+        <script type="text/javascript">
+            function testAdd(){
+                //获取元素对象
+                var inp=document.getElementById("showdiv");
+
+                //创建文件标签
+                var file=document.createElement("input");
+                file.type="file";
+                //创建按钮标签
+                var bt=document.createElement("input");
+                bt.type="button";
+                bt.value="delete";
+                bt.onclick=function(){
+                    inp.removeChild(file);
+                    inp.removeChild(bt);
+                    inp.removeChild(br);
+                }
+                //创建一个换行标签
+                var br=document.createElement("br");
+
+                //将所有创建好的标签放到div中
+                inp.appendChild(file);
+                inp.appendChild(bt);
+                inp.appendChild(br);
+
+
+            }
+            
+
+        </script>
+    </head>
+    <body>
+        <h3 align="center">js的操作THML文件2</h3>
+        <input type="button" value="Add" onclick="testAdd()"><hr>
+        <div id="showdiv"></div>
+    </body>
+</html>

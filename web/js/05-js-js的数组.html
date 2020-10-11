@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>js的数组</title>
+        <meta charset="utf-8">
+        <!--
+            js的数组:
+                1.数组的声明
+                    var arr=new Array();         第一种声明方式
+                    var arr2=new Array(length);  第二种声明方式
+                    var arr3=[];                 第三种声明方式(最常用)
+                2.数组的赋值和取值
+                    数组可以存储任何不同类型的数据,长度不固定,不会有脚标溢出问题
+                3.数组的length属性
+                    var arr=[]
+                    arr.length
+                4.数组的遍历
+        -->
+        <!--声明js代码域-->
+        <script type="text/javascript">
+//---------------------------------------------------------
+            //var arr=new Array();     第一种声明方式
+            
+            // var arr2=new Array(5);  第二种声明方式
+            // var arr3=[];            第三种声明方式
+//---------------------------------------------------------
+            //遍历1
+            var arr=[1,"213",3,"ad",4];
+            for(var i=0;i<arr.length;i++){
+                alert(arr[i]);
+            }
+            //遍历2
+            for(var i in arr){
+                alert(arr[i]);
+            }
+        </script>
+    </head>
+    <body>
+        <h3 align="center">js的数组</h3>
+    </body>
+</html>

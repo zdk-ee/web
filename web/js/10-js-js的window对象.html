@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <!--声明js代码域-->
+    <script type="text/javascript">
+        /*框体方法*/
+        //警告框（无返回值）
+        function testAlert() {
+            var al = window.alert("我是警告框");
+            alert(al);
+        }
+
+        //确认框（有返回值）
+        function testConfirm() {
+            var co = window.confirm("你确定要删除吗？");
+            alert(co);
+        }
+        //提示框（有返回值）
+        function testPrompt() {
+            var pr = window.prompt("请输入昵称：");
+            alert(pr);
+        }
+        //------------------------------------------------------------
+        /*定时执行*/
+        var idi; //声明全局变量
+
+        function testSetTimeout() {
+            idi = window.setTimeout(function() {
+                alert("我是定时执行");
+            }, 3000);
+        }
+        //停止当前的定时执行
+        function testClearTimeout() {
+            window.clearTimeout(idi);
+        }
+
+        //间隔执行
+        var ids; //声明全局变量
+
+        function testSetInterval() {
+            ids = window.setInterval(function() {
+                alert("我是间隔执行");
+            }, 2000);
+        }
+        //停止当前的间隔执行
+        function testClearInterval() {
+            window.clearInterval(ids);
+        }
+
+        /*子窗口方法*/
+        function testOpen() {
+            window.open('10-js-son.html', 'newwindow', 'height=400, width=600, top=100, left=300, toolbar=yes, menubar=yes, scrollbars=yes, resizable=yes, location=yes, status=yes');
+        }
+        /*子页面调用父页面的函数*/
+        function testFather() {
+            alert("父页面");
+        }
+        /*window对象的常用属性*/
+        function testLocation() {
+            window.location.href = "http://www.baidu.com";
+        }
+
+        function testLocationReload() {
+            window.location.reload();
+        }
+
+        function testHistoryForward() {
+            window.history.forward();
+        }
+
+        function testHistoryBack() {
+            window.history.back();
+        }
+
+        function testHistoryGo() {
+            window.history.go(1);
+        }
+
+        function testScreen() {
+            alert(window.screen.width + "x" + window.screen.height);
+        }
+
+        function testNavigetor() {
+            alert(window.navigator.userAgent);
+        }
+    </script>
+</head>
+
+<body>
+    <h3 align="center">js的window学习</h3>
+    <input type="button" id="" name="" value="测试警告框" onclick="testAlert()">
+    <input type="button" id="" name="" value="测试确定框" onclick="testConfirm()">
+    <input type="button" id="" name="" value="测试提示框" onclick="testPrompt()">
+    <hr/>
+    <input type="button" id="" name="" value="测试setTimeout--定时执行" onclick="testSetTimeout()">
+    <input type="button" id="" name="" value="测试setInterval--间隔执行" onclick="testSetInterval()"><br/>
+    <input type="button" id="" name="" value="测试clearTimeout--停止指定定时执行" onclick="testClearTimeout()">
+    <input type="button" id="" name="" value="测试clearInterval--停止指定间隔执行" onclick="testClearInterval()" </body>
+    <hr/>
+    <input type="button" id="" name="" value="测试open--子页面" onclick="testOpen()">
+    <hr>
+    <input type="button" value="测试地址属性" onclick="testLocation()">
+    <input type="button" value="测试地址的页面加载属性" onclick="testLocationReload()">
+    <br>
+    <input type="button" value="测试历史记录前进属性" onclick="testHistoryForward()">
+    <input type="button" value="测试历史纪录后退属性" onclick="testHistoryBack()">
+    <input type="button" value="测试历史纪录跳转属性" onclick="testHistoryGo()">
+    <br>
+    <input type="button" value="屏幕分辨率" onclick="testScreen()">
+    <br>
+    <input type="button" value="浏览器配置信息" onclick="testNavigetor()">
+
+
+</html>

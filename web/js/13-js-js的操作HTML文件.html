@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <!--声明js代码域-->
+        <script type="text/javascript">
+            //添加节点
+            function testAdd(){
+                var files = document.getElementById("showdiv");
+                files.innerHTML=files.innerHTML+"<div><input type='file' id='' name='' value='' ><input type='button' value='删除' onclick='delNode(this)'></div>"
+            }
+            //删除节点
+            function delNode(btu){
+                //获得父节点对象
+                var files = document.getElementById("showdiv");
+                //获得子节点对象
+                var cdiv = btu.parentNode;
+                //父节点删除子节点
+                files.removeChild(cdiv);
+            }
+        </script>
+    </head>
+    <body>
+        <h3 align="center">js的操作HTML文件</h3>
+        <input type="button" id="" name="" value="继续添加" onclick="testAdd()">
+        <hr/>
+        <div id="showdiv"></div>
+    </body>
+</html>

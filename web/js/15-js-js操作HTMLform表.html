@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <!--声明js代码域-->
+        <script type="text/javascript">
+        function testForm(){
+            //获取form表单对象
+            var fm=document.getElementById("fm");//var frm=document.frm;
+            
+            //获取form下所有表单元素集合
+            //fm.elements;
+
+            //常用方法
+            //fm.submit();  //提交表单数据
+            //fm.reset();   //重置
+            //属性操作
+            //fm.action="http://www.baidu.com/s";
+            //fm.method="get";
+        }
+
+        </script>
+    </head>
+    <body>
+        <h3 align="center">js的操作form表单</h3>
+        <input type="button" name="" id="" value="测试form表单操作" onclick="testForm()"><hr>
+        <form action="#" method="get" id="fm" name="frm">
+            用户名：<input type="text" id="user" name="wd" value="" readonly="readonly">
+            <br>
+            密码:<input type="password" id="pwd" name="pword" value="" disabled="disabled">
+            <br>
+            <input type="submit" value="登录">
+        </form>
+    </body>
+</html>

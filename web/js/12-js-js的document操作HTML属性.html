@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <!--声明js代码域-->
+        <script type="text/javascript">
+            function test1(){
+                //获取元素对象
+                var inp=document.getElementById("uname");
+                //获取固有属性值
+                alert(inp.type);
+            }
+            function test2(){
+                //获取元素对象
+                var inp=document.getElementById("uname");
+                //修改固有属性值
+                inp.type = "button";
+            }
+
+            function test3(){
+                //获取元素对象
+                var inp=document.getElementById("uname");
+                //获取自定义属性值
+                alert(inp.getAttribute("abc"));
+            }
+
+            function test4(){
+                //获取元素对象
+                var inp=document.getElementById("uname");
+                //修改自定义属性值
+                inp.setAttribute("abc","haha");
+                alert(inp.getAttribute("abc"));
+            }
+        </script>
+    </head>
+    <body>
+        <h3 align="center">js的document操作HTML属性</h3>
+        用户名<input type="text" name="" id="uname" value="按钮" abc="lala">
+        <input type="button" value="获取固有属性值" onclick="test1()">
+        <input type="button" value="修改固有属性值" onclick="test2()">
+        <input type="button" value="获取自定义属性值" onclick="test3()">
+        <input type="button" value="修改自定义属性值" onclick="test4()">
+
+    </body>
+</html>

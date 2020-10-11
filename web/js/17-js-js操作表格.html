@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <!--声明js代码域-->
+        <script type="text/javascript">
+            //删除行
+            function testDelTable(btn){
+                //获取表格对象
+                var ta=document.getElementById("ta");
+                //获取表格行对象
+                var tr_index = btn.parentNode.parentNode;
+                //删除表格行元素
+                ta.deleteRow(tr_index.rowIndex);
+            }
+            //修改数量
+            function testUpdate(btn){
+                //获取单元格对象
+                var tr=btn.parentNode.parentNode;
+                //获得第四列的单元格对象
+                var cell=tr.cells[3];
+                //判断cell.innerHTML的值是否为数字
+                if(!isNaN(cell.innerHTML)){
+                    //修改单元格内容
+                    cell.innerHTML="<input type='text' value='"+cell.innerHTML+"' onblur='testUpdate2(this)'/>";
+                }
+            }
+            function testUpdate2(inp){
+                var cell=inp.parentNode;
+                cell.innerHTML=inp.value;
+            }
+        </script>
+        <style type="text/css">
+        /*设置行高*/
+            #ta tr{
+                height:35px;
+            }
+        /*设置表格居中*/
+            #ta{
+                margin: auto;
+                margin-top: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <h3 align="center">js的操作表格</h3>
+        <table border="1px" id="ta" >
+            <tr style="text-align: center; font-weight: bold;">
+                <td width="100px">书名</td>
+                <td width="100px">作者</td>
+                <td width="100px">价格</td>
+                <td width="200px">数量</td>
+                <td width="200px" align="center">操作</td>
+            </tr>
+            <tr>
+                <td>java</td>
+                <td>we</td>
+                <td>54.0</td>
+                <td id="td1">3</td>
+                <td align="center">
+                    <input type="button" name="" id="" value="修改数量" onclick="testUpdate(this)">
+                    <input type="button" name="btn" id="" value="删除" onclick="testDelTable(this)">
+                </td>
+            </tr>
+            <tr>
+                <td>python</td>
+                <td>ll</td>
+                <td>88.0</td>
+                <td id="td2">2</td>
+                <td align="center">
+                    <input type="button" name="" id="" value="修改数量" onclick="testUpdate(this)">
+                    <input type="button" name="" id="" value="删除" onclick="testDelTable(this)">
+                </td>
+            </tr>
+            <tr>
+                <td>spring</td>
+                <td>ol</td>
+                <td>57.0</td>
+                <td id="td3">4</td>
+                <td align="center">
+                    <input type="button" name="" id="" value="修改数量" onclick="testUpdate(this)">
+                    <input type="button" name="" id="" value="删除" onclick="testDelTable(this)">
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

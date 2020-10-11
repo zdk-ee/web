@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <title>html的表格标签学习</title>
+        <meta charset="utf-8"/>
+    </head>
+    <body>
+        <h3></h3表格>
+        <hr width="500px" size="3px" color="blank" align="left"/>
+
+        <!--
+            表格标签学习:
+                tr:表示声明一行
+                    th:表示声明一个单元格,表头格,默认居中加黑显示
+                    td:表示声明一个单元格,默认居左显示
+            属性:
+                border:显示边框
+                width: 设置表格的宽度
+                height:设置表格的高度
+                cellpadding:设置内容距边框的距离
+                cellspacing:设置边框的大小
+
+            合并单元格(表格是规整的):
+                行合并:rowspan="合并单元格个数",之后删除要合并的其他单元格
+                列合并:colspan="合并单元格个数",之后删除要合并的其他单元格列合并
+
+                注意:如果是四个田字格合并,则两两合并
+
+
+        -->
+            
+        <table border="1px" cellpadding="10px" cellspacing="0px">
+            <tr height="50px">
+                <th width="70px">姓名</th>
+                <th width="70px">年龄</th>
+                <th width="70px">专业</th>
+            </tr>
+            <tr height="50px" >
+                <td>bryan</td>
+                <td>18</td>
+                <td>大数据</td>
+            </tr>
+            <tr height="50px" >
+                <td>John</td>
+                <td>20</td>
+                <td>软件工程</td>
+            </tr>
+
+        </table>
+
+        <h3>单元格的合并学习</h3>
+        <hr />
+        <table border="1px" cellspacing="0">
+            <tr height="30px">
+                <th width="50px"></th>
+                <th width="50px"></th>
+                <th width="100px" colspan="2" rowspan="2"></th>
+            </tr>
+
+            <tr height="30px">
+                <td colspan="2"></td>
+            </tr>
+            <tr height="30px">
+                <td></td>
+                <td></td>
+                <td rowspan="2"></td>
+                <td></td>
+            </tr>
+            <tr height="30px">
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+        <a href="07-html-homework.html" target="_blank"><dd>html-表格标签作业(简历制作)</dd></a>    
+    </body>
+</html>
